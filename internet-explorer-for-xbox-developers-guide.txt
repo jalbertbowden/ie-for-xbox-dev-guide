@@ -1,0 +1,274 @@
+Internet Explorer for Xbox Developer’s Guide
+September 26, 2012
+Abstract
+This paper provides information about Internet Explorer for Xbox. It provides guidelines for developers to who want to optimize their site for Internet Explorer for Xbox. It contains design recommendations, and it describes some of the technical differences between Internet Explorer 9 and Internet Explorer for Xbox.
+This information applies to the following product: 
+	Xbox® 360
+
+References and resources discussed here are listed at the end of this paper.
+The current version of this paper is maintained on the Web at: 
+	http://go.microsoft.com/fwlink/p/?LinkId=259808
+
+
+Disclaimer: This document is provided “as-is”. Information and views expressed in this document, including URL and other Internet website references, may change without notice. Some information relates to pre-released product which may be substantially modified before it’s commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here. You bear the risk of using it.
+This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes. 
+© 2012 Microsoft. All rights reserved.
+
+
+
+
+Contents
+Overview	3
+Web Hub	3
+Input Methods	3
+Free Cursor	3
+On-screen keyboard	4
+Controller and Xbox 360 Chatpad	5
+Xbox SmartGlass	5
+Voice	5
+10’ Design considerations	6
+Distance from the Screen	6
+Content and Functionality	7
+Interactions – keep them simple	7
+Navigation and Links	7
+Layout	9
+Size	9
+Fixed position elements	9
+Text Considerations	9
+Color Guidelines	10
+Approaches for 4 screens: TV, PC, Tablet, Mobile	10
+Multiple, device-specific webpages	10
+One webpage	10
+Technical Considerations	11
+HTML5 features	11
+User-agent Header / string	13
+Appropriate usage of the user-agent string	13
+Fonts	13
+Memory	13
+Panning and Scrolling	14
+JavaScript Performance	14
+Media Formats	14
+Extensions: Plug-ins, ActiveX, and Downloads	15
+Debugging and testing	15
+Disable ActiveX Controls	15
+Layout	15
+User-agent string	15
+FAQ	16
+
+
+Overview	
+Internet Explorer for Xbox 360 is a browsing experience that lets users easily browse the Internet on a television from 10 feet away from the screen.  It’s based on Internet Explorer 9 platform and has many of the same features as Internet Explorer 9 for Windows.
+Most websites that work well in Internet Explorer 9 for Windows also work well in Internet Explorer for Xbox without modification. HTML5 features introduced in Internet Explorer 9 like <audio> and <video>, CSS2.1, and SVG are fully supported in Internet Explorer for Xbox.
+This document is for developers who want to optimize their site for Internet Explorer for Xbox. It contains design recommendations, and it describes some of the technical differences between Internet Explorer 9 and Internet Explorer for Xbox.
+Web Hub
+When users start Internet Explorer on Xbox, the Web Hub is automatically loaded. The Web Hub is the central place from which you navigate to websites. Users can pick from their Favorites, go to recently viewed sites, or type into the address bar. To launch the Web Hub at any time, users can press ‘Y’ on the controller or say “Xbox Web Hub” if they have a Kinect™ for Xbox 360® attached.
+
+
+
+
+Input Methods
+Free Cursor
+A free-floating cursor model (pictured in the following image) is used across Internet Explorer for Xbox. A cursor lets users seamlessly interact with every part of the browser the same way – users can point and click on webpage links, the address bar, the Web Hub, settings, or informational messages. When the cursor is moved to the edges of the screen, the webpage is automatically scrolled or panned so that it’s easy to navigate webpages with just the left thumbstick and the ‘A’ button.
+
+On-screen keyboard
+For users without an Xbox SmartGlass device, keyboard, or an Xbox 360 Chatpad, an on-screen keyboard is used for text entry:
+
+
+Controller and Xbox 360 
+The Xbox controller can be used to control all browser features:
+
+
+
+
+Xbox SmartGlass
+Xbox SmartGlass is software that you can run on your smartphone or tablet (Windows Phone, Windows 8, iOS, Android) to connect to your Xbox. Using Internet Explorer 9, you can use Xbox SmartGlass as a second screen and a controller. Using touch-enabled devices, you can use your device like a track pad to move the cursor, and you can type with the touch keyboard on your device.
+Voice
+The Kinect Sensor lets users navigate seamlessly among their favorite websites and commonly used browser functions. While voice can’t be used to navigate specific links within a webpage, there is support for common controls such as “Go Back / Forward” to move between pages, and “Play / Pause” for HTML5 video.
+
+Supported voice commands
+Web Hub 
+“Go Back”Go to next item in the back stack“Go Forward”Go to next item in the forward stack“Hide Web Hub”Hides Web Hub “Show Keyboard”Brings up virtual keyboard“Hide Keyboard”Hides virtual keyboard “Add Favorite”Adds webpage to Favorites“Remove Favorite”Removes webpage from Favorites“Settings”Web Hub“Favorites”Opens Favorites list“Recent”	Opens Recent list“Featured”Opens Featured list“Item…”	Opens a site (within Recent list)“Site Name” (dynamic)Opens a site (within Featured list)“Site Name” (dynamic/user customizable)Opens a site (within Favorites list)
+
+Webpage level
+“Go Back”Go to next item in the back stack“Go Forward”Go to next item in the forward stack“Web Hub”Opens Web Hub to last viewed state“Favorites”Opens Web Hub to Favorites list“Add Favorite”Adds webpage to Favorites“Remove Favorite”Removes webpage from Favorites“Previous Favorite”Go to previous item in Favorites list“Next Favorite”Go to next item in Favorites list“Settings”Web Hub“Play”Plays on screen video “Pause”	Pauses on screen video“Full Screen”Opens on screen video in full screen
+10’ Design considerations
+Distance from the Screen
+“10’ design” applies to experiences that are optimized for the living room. Most Xbox users connect their Xbox to a television and sit about 10 feet away from the screen. This distance can make basic tasks on traditional webpages more difficult. For example, small fonts can be hard to read, and hover menus and small links can be difficult to click. 
+When designing a webpage for TV, the viewable area should display less information overall, and what's there should focus on a confined set of tasks (even consider performing their desired task automatically or select the task by default). Try to keep all content "above the fold" and fully viewable on the screen without scrolling down.
+* Fonts and graphics on the site need to be larger to account for viewing distance. People sit proportionally farther from a TV than from a computer monitor of the same size.
+* To avoid a cluttered appearance on the TV, blank space between elements on the page should be greater. This is typically called white space (or padding) and it's a fundamental aspect of making web content easy to discern and navigate.
+* Wide screen displays have more usable horizontal real estate than a desktop monitor, so navigation is better handled from the side (conserving valuable vertical space for content) or as an overlay.
+Content and Functionality
+Great 10’ web experiences are optimized for content consumption, as opposed to creation and productivity scenarios. For example, a user-generated video website might support video browsing, playback, upload, editing, and tagging features. A 10’ version might optimize specifically for browsing and playback, and might not offer editing capabilities. Remove links and functionality that don’t make sense in the TV environment such as downloading and uploading functionality.
+Keep navigation sidebars above the fold. This may require reducing the number of items in your navigation elements. If you're optimizing your site through CSS, you can place categories in divs and hide eliminated categories with display:none.
+Interactions – keep them simple
+Users will interact with Internet Explorer with a variety of input devices, including the controller, Xbox SmartGlass, Xbox 360 Chatpad, and voice. Keep in mind that some interactions that work well with a mouse and keyboard are more difficult to perform using touch or a controller. Avoid using drag-and-drop, hover, and timed interactions.
+Navigation and Links
+Compared with desktop browsing, two key differences in the living room experience are that user is further away and that controller or finger is a less precise input than the mouse. Along with making targets larger, it may also be necessary to remove links that aren’t appropriate for TV or seldom accessed links to keep navigation above the fold.
+When designing navigation interfaces, make it easy for users to select links and other hit targets by emphasizing selections and making them larger and easy to see. 
+* Add a hover state to links and buttons to highlight when the pointer has hit its target.
+* Make each click target (link, button, and the like) large with ample padding for an expanded target area.
+* Elements like close boxes in the corners of pop-ups that are made small to be unobtrusive in a 2-foot UI are either impossible to see or very difficult to click with a mouse from 10 feet.
+* Avoid using popups elements. They can be distracting and difficult to close.
+For example, in these next images, there are two examples of a vertical navigation bar. The first example is designed for a mouse interaction. The link spacing is too close together for touch and controller users:
+
+Navigating to these links requires too much dexterity on the part of touch and controller users. Clicking the wrong link can be frustrating.
+
+In this second of the two images, the navigation bar has been modified so that the links are spaced further apart, and dividers have been added that help the user see the hit target area more clearly:
+ 
+
+
+Layout 
+Size
+Internet Explorer for Xbox uses a combination of zoom and optical zoom to provide a TV-optimized presentation of sites. Websites are automatically zoomed to “fit to width” so that text is larger and legible from a distance. There are several factors that determine this automatic zoom level, including the TV aspect ratio (16:9 or 4:3), the resolution (480p, 720, 1080), and the size of the “Safe Area,” which is a buffer area around the edge of the TV screen.
+Because Internet Explorer for Xbox automatically optimizes the zoom levels for different hardware, there are a few factors that you should take into account:
+* Websites designed for 1024px width generally look great. Internet Explorer will automatically fit your webpage to width using layout zoom.
+* Many TVs are widescreen (16:9). Consider using a layout that takes advantage of the width of the screen, rather than requiring vertical scrolling. 
+* Internet Explorer for Xbox doesn’t support multiple windows, so avoid pop-up windows.
+Fixed position elements
+Fixed position elements (CSS position: fixed) can interfere with smooth panning and scrolling. Avoid positioning elements this way.
+Text Considerations
+You can increase the legibility of your text by ensuring that it’s large enough to be read from 10’ away, and by using colors that reduce eye strain.
+* Avoid using text that is smaller than 12pt.
+* Many televisions have a higher brightness level than a computer monitor. Light-colored text on a dark background can reduce eye strain.
+Color Guidelines 
+* Avoid using pure white (rgb(255, 255, 255)) as a background color. Instead, use rgb(200, 200, 200)
+* Internet Explorer will color the “safe area” region at the edge of the screen the same color as your <body> element’s background-color. 
+* Test your website on low-quality TVs as well as newer HDTVs.
+
+Approaches for 4 screens: TV, PC, Tablet, Mobile
+For maximum customer reach, many websites are designed and tested for several device form factors, including desktop/laptop PC, tablet, and mobile devices.
+Multiple, device-specific webpages
+Some websites have device-specific experiences (for example, a mobile site). This might be appropriate for some scenarios. For example, if you’re designing a special experience for Xbox that’s different than your mobile and desktop experiences, it might be appropriate to build a separate, standalone experience. However, it can be costly to maintain multiple independent versions of your site.
+A common way of doing this is to detect the user-agent string (either on the client or the server) and redirect the user to a device-specific webpage. To detect the Xbox, search for the “Xbox” token in the user-agent string.
+One webpage
+Given the proliferation of web browsing form factors and input methods, for most websites, we recommend using a single webpage that works well across a range of devices. Here are some things to consider when targeting multiple devices with a single page:
+* Design for mouse, keyboard, touch, and controller
+* Design for 1024px width, or
+* Use adaptive design
+o CSS Media Queries or JavaScript can be used to change the layout of your page based on properties of the device that is loading the page.
+* On mobile devices, consider reducing image quality to save bandwidth and improve performance
+* Minimize horizontal scrolling on narrow devices to improve readability
+* Avoid using plug-ins
+o Use HTML5 audio and video (h.264/AAC/MP3)
+* Avoid using pop-up windows
+Technical Considerations
+
+HTML5 features
+Here’s a list of some of the HTML5 features that are supported:
+*  HTML5 
+o Audio
+o Canvas
+o DOM Storage (Web Storage)
+o Geolocation
+o Selection APIs
+o Semantic Elements
+o Video
+* CSS 
+o CSS 2.1 compliance
+o CSS3 2D Transforms
+o CSS3 Backgrounds & Borders
+o CSS3 Color
+o CSS3 Media Queries
+o CSS3 Namespaces
+o CSS3 Values and Units
+o CSS3 Selectors
+* DOM 
+o DOM Core (L2 and L3) and Views (L2)
+o DOM Element Traversal
+o DOM L2 and L3 Events
+o DOM L2 HTML
+o DOM L2 Style
+o DOM L2 Traversal and Range
+o Enhanced DOM
+o Mutable DOM Prototypes
+o Selectors API
+* ECMAScript 5
+* SVG 1.1 (Second Edition) 
+o Most document structure, interactivity and styling
+o Basic shapes
+o Filling, stroking, marker, color
+o Patterns
+o Paths
+o Text
+* XHTML5
+* Miscellaneous 
+o Cross-domain request (XDR)
+o Data URI support
+o Native JSON support
+o SVG in HTML
+Internet Explorer for Xbox has the same HTML5 features as Internet Explorer 9 for Windows, except for the following changes shown here:
+Differences between HTML5 features for Internet Explorer for Xbox and Internet Explorer 9W3C GeolocationW3C Geolocation isn’t included in Internet Explorer for Xbox.
+
+navigator.geolocation is undefined.@font-face@font-face is supported; however, only .woff and .ttf files are supported.prompt() methodThe JavaScript prompt() method isn’t supported.HTTP AuthenticationHTTP Authentication using the basic method is supported. The digest method isn’t supported.VBScriptVBScript isn’t supported and is ignored.Copy / Paste with JavscriptSelection, copy, and paste aren’t supported.XML Data IslandsXML Data Islands aren’t supported.
+
+For a complete list of features that are supported in Internet Explorer for Xbox, refer to:
+* Internet Explorer 9 Guide for Developers 
+o Except sections on UA String, Pinned Sites and Developer tools which aren’t applicable to Internet Explorer for Xbox.
+* A Quick Guide to Internet Explorer 8 Developer Features 
+o Except sections on Web services (Accelerators & Web Slices), Accessibility Protected Mode API, User Control and Developer Tools, which aren’t applicable to Internet Explorer for Xbox
+* Internet Explorer Standards Support Documents
+User-agent Header / string
+Compatibility View is a mode of Internet Explorer that allows webpages that were written for older versions of web standards to work correctly. In Internet Explorer for Xbox, Compatibility View is only enabled if a website is contained in a list of sites that is updated by Microsoft. For more info about the Compatibility View List, refer to Understanding the Compatibility View List. When Compatibility View is enabled on a website, a different User-Agent string is sent to the website.
+Users with standard definition (SD) televisions, which are lower-resolution, might use the mobile versions of websites. Users can do this in Internet Explorer for Xbox settings (“Use web pages formatted for mobile devices”). This also changes the Internet Explorer for Xbox User-Agent string.
+Here are the User-Agent strings that are sent by Internet Explorer for Xbox.
+
+Compatibility ViewDesktop/MobileStringOFFDesktopMozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0; Xbox)OFFMobileMozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0; Xbox)ONDesktopMozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident/3.1; Xbox)ONMobileMozilla/4.0 (compatible; MSIE 7.0; Windows Phone OS 7.5; Trident/3.1; IEMobile/7.0; Xbox)
+Appropriate usage of the user-agent string
+Great websites work well across different browsers and form factors. The best way to build code that works across browsers is to do feature and behavior detection. For example, don’t assume that a feature exists based on the user-agent string alone. To learn more about feature and behavior detection, see Same Markup: Writing Cross-Browser Code. 
+If you’re building a separate website for Internet Explorer for Xbox, for example, a TV-formatted experience, checking for the “Xbox” token in the user-agent string might be an appropriate way to redirect to your TV-formatted website.
+Fonts
+Downloadable fonts are supported via the CSS @font-face feature. The supported font formats are WOFF and TTF. The Embedded OpenType (.EOT) format isn’t supported.
+Memory
+The Xbox console has 512MB of total system memory. Video and system memory are shared. Additionally, there’s no virtual memory, and the Xbox hard drive isn’t used as a paging mechanism. This is significantly less memory than is available on modern desktop and laptop computers.
+It’s possible to construct a webpage that requires too much memory to load. Large image elements might not render, or in extreme cases, the browser might exit and return the user to the Xbox home screen. Make sure that your website functions well, and that all resources load correctly.
+If your webpage isn’t loading, try these steps to minimize memory usage:
+* Reduce the resolution of your image resources.
+By reducing image resolution, your images will download faster, and use less memory. If the display size of the reduced resolution image is too small, you can use CSS to stretch an image back to the original display size. Make sure that you rescale your image using an image editing tool – simply scaling the image down via CSS, or changing formats from .png to .jpg won’t reduce memory usage.
+* Only use one <video> tag.
+There is an overhead memory cost for each <video> element on a page. You can use a single <video> element and modify it as necessary (change its position, change the video src attribute, and so on).
+Panning and Scrolling
+Avoid the use of CSS position:fixed, especially on pages that pan or scroll. These elements interfere with smooth scrolling and panning by forcing the page to re-layout during panning and scrolling.
+Internet Explorer for Xbox makes it easy for users to pan and scroll webpages with push scrolling, which automatically scrolls the webpage when the user pushes the cursor to the edges of the screen.
+Avoid using <divs> or <iframes> for scrolling content. Use the <body> element of your webpage to contain scrolling content. Push scrolling doesn’t work with sub-scrolling elements. Users must use the right thumbstick to scroll subscrollers.
+JavaScript Performance
+Internet Explorer for Xbox uses the JavaScript engine for Internet Explorer for fast JavaScript interpretation. However, it doesn’t have JIT (Just In Time) compilation, so some JavaScript operations might take longer compared with Internet Explorer for Windows.
+Internet Explorer for Xbox also contains performance enhancements for smooth panning and scrolling. To maintain smooth panning and scrolling on your webpage, limit the use of JavaScript that responds to scroll events.  
+Media Formats
+Audio and video support are available via the HTML5 <audio> and <video> tags. For video, the h.264 format is supported. For audio, MP3 and AAC are supported.
+For optimal video performance, we recommend that you encode your video using the h.264 “high” profile at 720p resolution.
+Extensions: Plug-ins, ActiveX, and Downloads
+Plug-ins, like ActiveX controls, Browser Helper Objects, Toolbars, and Explorer bars aren’t supported in Internet Explorer for Xbox. HTML5 audio and video are available for high quality media experiences.
+File downloads and executable programs aren’t supported. All file downloads are blocked.
+Debugging and testing
+To develop and debug your website for Internet Explorer for Xbox, you can use Internet Explorer 9 on Windows. 
+Disable ActiveX Controls
+Because Internet Explorer for Xbox doesn’t support plug-ins, you’ll want to make sure that you disable any ActiveX controls, such as Microsoft Silverlight or Adobe Flash. To do that easily, turn on ActiveX Filtering.
+In Internet Explorer 9:
+1. Click Safety, and then click ActiveX Filtering.
+2. Reload your webpage by clicking the Refresh button.
+You can turn off ActiveX Filtering by following the same steps.
+Layout
+Be sure to test your size at a variety of zoom levels, as these will be automatically adjusted on the Xbox based on the user’s TV type and connection.
+In Internet Explorer 9, click Tools, click Zoom, and then click Custom… 
+Test a range of zoom levels from 100% to 185%. 
+User-agent string
+You can change the user-agent string in Internet Explorer 9 by using the developer tools:
+1) Press F12.
+2) Click Tools, select Change user agent string, and then click Custom…
+3) In the Friendly Name field, type Xbox: desktop, CV off.
+4) In the User Agent String field, type Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0; Xbox).
+5) Click Add.
+6) Click Set.
+FAQ
+Q: Can users manage their own cookies?
+A: Yes. Users can delete their cookies and all their browsing history in Settings.
+
+
+Internet Explorer for Xbox Developer’s Guide - 16
+
+October 18, 2012
+© 2012 Microsoft. All rights reserved.
+
+					
+
