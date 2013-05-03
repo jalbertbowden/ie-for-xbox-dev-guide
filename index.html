@@ -8,224 +8,69 @@
   </head>
   <body>
     <div class="content">
-      <header role="banner"></header>
-      <div class="main" role="main">
+      <header class="banner" role="banner"><a class="logo" href="http://windows.com/"><img src="i/windows-header-blue.gif" alt="Windows" /></a></header>
+      <div class="main clearright" role="main">
         <article role="article">
           <section role="region">
+            <header class="index-header">
             <h1 class="indexh">Internet Explorer for Xbox Developer's Guide</h1>
-            <p class=MsoTitle>Internet Explorer for Xbox Developer�s Guide</p>
+           
+            
+            <p>September 26, 2012</p>
+<h2 class="header-lead">Abstract</h2>
+<p>This paper provides information about Internet Explorer for Xbox. It provides guidelines for developers to who want to optimize their site for Internet Explorer for Xbox. It contains design recommendations, and it describes some of the technical differences between Internet Explorer 9 and Internet Explorer for Xbox.</p>
+<p class="no-margin-bottom">This information applies to the following product:  Xbox 360</p>
+<p>References and resources discussed here are listed at the end of this paper.</p>
+<p style='margin-right:-1.0in'>The current version of this paper is maintained on the Web at: <a href="http://go.microsoft.com/fwlink/p/?LinkId=259808">http://go.microsoft.com/fwlink/p/?LinkId=259808</a></p>
 
-<p class=Version>September 26, 2012</p>
-
-<div style='border:none;border-bottom:solid navy 1.0pt;padding:0in 0in 1.0pt 0in'>
-
-<p class=Procedure>Abstract</p>
-
+<div style='border:solid windowtext 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt'>p class=Disclaimertext style='margin-bottom:3.0pt'><b>Disclaimer</b>: This document is provided as-is. Information and views expressed in this document, including URL and other Internet website references, may change without notice. Some information relates to pre-released product which may be substantially modified before its commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here. You bear the risk of using it.</p>
+  <p class=Disclaimertext style='margin-bottom:3.0pt'>This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes. </p>
+  <p class=Disclaimertext> 2012 Microsoft. All rights reserved.</p>
 </div>
 
-<p class=MsoBodyText>This paper provides information about Internet Explorer
-for Xbox. It provides guidelines for developers to who want to optimize their
-site for Internet Explorer for Xbox. It contains design recommendations, and it
-describes some of the technical differences between Internet Explorer 9 and
-Internet Explorer for Xbox.</p>
+<p align=right style='text-align:right'><img id="Picture 11"src="i/microsoft-logo-black-01.png" alt="Microsoft" /></p>
 
-<p class=MsoBodyText style='margin-bottom:0in;margin-bottom:.0001pt'>This
-information applies to the following product: <br>
-������� Xbox� 360</p>
 
-<p class=MsoBodyText>&nbsp;</p>
 
-<p class=MsoBodyText>References and resources discussed here are listed at the
-end of this paper.</p>
-
-<p class=MsoBodyText style='margin-right:-1.0in'>The current version of this
-paper is maintained on the Web at: <br>
-������� <a href="http://go.microsoft.com/fwlink/p/?LinkId=259808">http://go.microsoft.com/fwlink/p/?LinkId=259808</a></p>
-
-<p class=MsoBodyText>&nbsp;</p>
-
-<p class=MsoBodyText>&nbsp;</p>
-
-<div style='border:solid windowtext 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt'>
-
-<p class=Disclaimertext style='margin-bottom:3.0pt'><b>Disclaimer</b>: This
-document is provided �as-is�. Information and views expressed in this document,
-including URL and other Internet website references, may change without notice.
-Some information relates to pre-released product which may be substantially
-modified before it�s commercially released. Microsoft makes no warranties,
-express or implied, with respect to the information provided here. You bear the
-risk of using it.</p>
-
-<p class=Disclaimertext style='margin-bottom:3.0pt'>This document does not
-provide you with any legal rights to any intellectual property in any Microsoft
-product. You may copy and use this document for your internal, reference
-purposes. </p>
-
-<p class=Disclaimertext>� 2012 Microsoft. All rights reserved.</p>
-
-</div>
-
-<p class=MsoNormal>&nbsp;</p>
-
-<p class=MsoBodyText align=right style='text-align:right'><img border=0
-width=111 height=27 id="Picture 11"
-src="internet-explorer-for-xbox-developers-guide_files/image001.png"></p>
-
-<span style='font-size:11.0pt;font-family:"Calibri","sans-serif"'><br
-clear=all style='page-break-before:always'>
-</span>
-
-<p class=MsoBodyText>&nbsp;</p>
-
-<div style='border:none;border-bottom:solid navy 1.0pt;padding:0in 0in 1.0pt 0in'>
-
-<p class=Contents style='margin-left:-.5in !msorm;margin-left:0in'>Contents</p>
-
-</div>
-
-<p class=MsoToc1><a href="#_Toc335749349">Overview<span style='color:windowtext;
-display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>3</span></a></p>
-
-<p class=MsoToc2><a href="#_Toc335749350">Web Hub<span style='color:windowtext;
-display:none;text-decoration:none'>. </span><span
-style='color:windowtext;display:none;text-decoration:none'>3</span></a></p>
-
-<p class=MsoToc1><a href="#_Toc335749351">Input Methods<span style='color:windowtext;
-display:none;text-decoration:none'>. </span><span
-style='color:windowtext;display:none;text-decoration:none'>3</span></a></p>
-
-<p class=MsoToc2><a href="#_Toc335749352">Free Cursor<span style='color:windowtext;
-display:none;text-decoration:none'>. </span><span
-style='color:windowtext;display:none;text-decoration:none'>3</span></a></p>
-
-<p class=MsoToc2><a href="#_Toc335749353">On-screen keyboard<span
-style='color:windowtext;display:none;text-decoration:none'>. </span><span
-style='color:windowtext;display:none;text-decoration:none'>4</span></a></p>
-
-<p class=MsoToc2><a href="#_Toc335749354">Controller and Xbox 360 Chatpad<span
-style='color:windowtext;display:none;text-decoration:none'>. </span><span
-style='color:windowtext;display:none;text-decoration:none'>5</span></a></p>
-
-<p class=MsoToc2><a href="#_Toc335749355">Xbox SmartGlass<span
-style='color:windowtext;display:none;text-decoration:none'>. </span><span
-style='color:windowtext;display:none;text-decoration:none'>5</span></a></p>
-
-<p class=MsoToc2><a href="#_Toc335749356">Voice<span style='color:windowtext;
-display:none;text-decoration:none'>. </span><span
-style='color:windowtext;display:none;text-decoration:none'>5</span></a></p>
-
-<p class=MsoToc1><a href="#_Toc335749357">10� Design considerations<span
-style='color:windowtext;display:none;text-decoration:none'>. </span><span
-style='color:windowtext;display:none;text-decoration:none'>6</span></a></p>
-
-<p class=MsoToc2><a href="#_Toc335749358">Distance from the Screen<span
-style='color:windowtext;display:none;text-decoration:none'>. </span><span
-style='color:windowtext;display:none;text-decoration:none'>6</span></a></p>
-
-<p class=MsoToc2><a href="#_Toc335749359">Content and Functionality<span
-style='color:windowtext;display:none;text-decoration:none'>. </span><span
-style='color:windowtext;display:none;text-decoration:none'>7</span></a></p>
-
-<p class=MsoToc2><a href="#_Toc335749360">Interactions � keep them simple<span
-style='color:windowtext;display:none;text-decoration:none'>. </span><span
-style='color:windowtext;display:none;text-decoration:none'>7</span></a></p>
-
-<p class=MsoToc2><a href="#_Toc335749361">Navigation and Links<span
-style='color:windowtext;display:none;text-decoration:none'>. </span><span
-style='color:windowtext;display:none;text-decoration:none'>7</span></a></p>
-
-<p class=MsoToc2><a href="#_Toc335749362">Layout<span style='color:windowtext;
-display:none;text-decoration:none'>. </span><span
-style='color:windowtext;display:none;text-decoration:none'>9</span></a></p>
-
-<p class=MsoToc3><a href="#_Toc335749363">Size<span style='color:windowtext;
-display:none;text-decoration:none'>. </span><span
-style='color:windowtext;display:none;text-decoration:none'>9</span></a></p>
-
-<p class=MsoToc3><a href="#_Toc335749364">Fixed position elements<span
-style='color:windowtext;display:none;text-decoration:none'>. </span><span
-style='color:windowtext;display:none;text-decoration:none'>9</span></a></p>
-
-<p class=MsoToc2><a href="#_Toc335749365">Text Considerations<span
-style='color:windowtext;display:none;text-decoration:none'>. </span><span
-style='color:windowtext;display:none;text-decoration:none'>9</span></a></p>
-
-<p class=MsoToc2><a href="#_Toc335749366">Color Guidelines<span
-style='color:windowtext;display:none;text-decoration:none'>. </span><span
-style='color:windowtext;display:none;text-decoration:none'>10</span></a></p>
-
-<p class=MsoToc2><a href="#_Toc335749367">Approaches for 4 screens: TV, PC,
-Tablet, Mobile<span style='color:windowtext;display:none;text-decoration:none'>. </span><span
-style='color:windowtext;display:none;text-decoration:none'>10</span></a></p>
-
-<p class=MsoToc3><a href="#_Toc335749368">Multiple, device-specific webpages<span
-style='color:windowtext;display:none;text-decoration:none'>. </span><span
-style='color:windowtext;display:none;text-decoration:none'>10</span></a></p>
-
-<p class=MsoToc3><a href="#_Toc335749369">One webpage<span style='color:windowtext;
-display:none;text-decoration:none'>. </span><span
-style='color:windowtext;display:none;text-decoration:none'>10</span></a></p>
-
-<p class=MsoToc1><a href="#_Toc335749370">Technical Considerations<span
-style='color:windowtext;display:none;text-decoration:none'>. </span><span
-style='color:windowtext;display:none;text-decoration:none'>11</span></a></p>
-
-<p class=MsoToc2><a href="#_Toc335749371">HTML5 features<span style='color:
-windowtext;display:none;text-decoration:none'>. </span><span
-style='color:windowtext;display:none;text-decoration:none'>11</span></a></p>
-
-<p class=MsoToc2><a href="#_Toc335749372">User-agent Header / string<span
-style='color:windowtext;display:none;text-decoration:none'>. </span><span
-style='color:windowtext;display:none;text-decoration:none'>13</span></a></p>
-
-<p class=MsoToc3><a href="#_Toc335749373">Appropriate usage of the user-agent
-string<span style='color:windowtext;display:none;text-decoration:none'>. </span><span
-style='color:windowtext;display:none;text-decoration:none'>13</span></a></p>
-
-<p class=MsoToc2><a href="#_Toc335749374">Fonts<span style='color:windowtext;
-display:none;text-decoration:none'>. </span><span
-style='color:windowtext;display:none;text-decoration:none'>13</span></a></p>
-
-<p class=MsoToc2><a href="#_Toc335749375">Memory<span style='color:windowtext;
-display:none;text-decoration:none'>. </span><span
-style='color:windowtext;display:none;text-decoration:none'>13</span></a></p>
-
-<p class=MsoToc2><a href="#_Toc335749376">Panning and Scrolling<span
-style='color:windowtext;display:none;text-decoration:none'>. </span><span
-style='color:windowtext;display:none;text-decoration:none'>14</span></a></p>
-
-<p class=MsoToc2><a href="#_Toc335749377">JavaScript Performance<span
-style='color:windowtext;display:none;text-decoration:none'>. </span><span
-style='color:windowtext;display:none;text-decoration:none'>14</span></a></p>
-
-<p class=MsoToc2><a href="#_Toc335749378">Media Formats<span style='color:windowtext;
-display:none;text-decoration:none'>. </span><span
-style='color:windowtext;display:none;text-decoration:none'>14</span></a></p>
-
-<p class=MsoToc2><a href="#_Toc335749379">Extensions: Plug-ins, ActiveX, and
-Downloads<span style='color:windowtext;display:none;text-decoration:none'>. </span><span
-style='color:windowtext;display:none;text-decoration:none'>15</span></a></p>
-
-<p class=MsoToc1><a href="#_Toc335749380">Debugging and testing<span
-style='color:windowtext;display:none;text-decoration:none'>. </span><span
-style='color:windowtext;display:none;text-decoration:none'>15</span></a></p>
-
-<p class=MsoToc2><a href="#_Toc335749381">Disable ActiveX Controls<span
-style='color:windowtext;display:none;text-decoration:none'>. </span><span
-style='color:windowtext;display:none;text-decoration:none'>15</span></a></p>
-
-<p class=MsoToc2><a href="#_Toc335749382">Layout<span style='color:windowtext;
-display:none;text-decoration:none'>. </span><span
-style='color:windowtext;display:none;text-decoration:none'>15</span></a></p>
-
-<p class=MsoToc3><a href="#_Toc335749383">User-agent string<span
-style='color:windowtext;display:none;text-decoration:none'>. </span><span
-style='color:windowtext;display:none;text-decoration:none'>15</span></a></p>
-
-<p class=MsoToc1><a href="#_Toc335749384">FAQ<span style='color:windowtext;
-display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>16</span></a></p>
+<h2 class="header-toc" >Contents</h2>
+<ul class="toc">
+  <li><a href="#_Toc335749349">Overview</a></li>
+  <li><a href="#_Toc335749350">Web Hub</a></li>
+  <li><a href="#_Toc335749351">Input Methods</a></li>
+  <li><a href="#_Toc335749352">Free Cursor</a></li>
+  <li><a href="#_Toc335749353">On-screen keyboard</a></li>
+  <li><a href="#_Toc335749354">Controller and Xbox 360 Chatpad</a></li>
+  <li><a href="#_Toc335749355">Xbox SmartGlass</a></li>
+  <li><a href="#_Toc335749356">Voice</a></li>
+  <li><a href="#_Toc335749357">10 Design considerations</a></li>
+  <li><a href="#_Toc335749358">Distance from the Screen</a></li>
+  <li><a href="#_Toc335749359">Content and Functionality</a></li>
+  <li><a href="#_Toc335749360">Interactions  keep them simple</a></li>
+  <li><a href="#_Toc335749361">Navigation and Links</a></li>
+  <li><a href="#_Toc335749362">Layout</a></li>
+  <li><a href="#_Toc335749363">Size</a></li>
+  <li><a href="#_Toc335749364">Fixed position elements</a></li>
+  <li><a href="#_Toc335749365">Text Considerations</a></li>
+  <li><a href="#_Toc335749366">Color Guidelines</a></li>
+  <li><a href="#_Toc335749367">Approaches for 4 screens: <abbr title="Television">tv</abbr>, <abbr title="Personal Computer">pc</abbr>, Tablet, Mobile</a></li>
+  <li><a href="#_Toc335749368">Multiple, device-specific webpages</a></li>
+  <li><a href="#_Toc335749369">One webpage</a></li>
+  <li><a href="#_Toc335749370">Technical Considerations</a></li>
+  <li><a href="#_Toc335749371">HTML5 features</a></li>
+  <li><a href="#_Toc335749372">User-agent Header / string</a></li>
+  <li><a href="#_Toc335749373">Appropriate usage of the user-agent string</a></li>
+  <li><a href="#_Toc335749374">Fonts</a></li>
+  <li><a href="#_Toc335749375">Memory</a></li>
+  <li><a href="#_Toc335749376">Panning and Scrolling</a></li>
+  <li><a href="#_Toc335749377">JavaScript Performance</a></li>
+  <li><a href="#_Toc335749378">Media Formats</a></li>
+  <li><a href="#_Toc335749379">Extensions: Plug-ins, ActiveX, and Downloads</a></li>
+  <li><a href="#_Toc335749380">Debugging and testing</a></li>
+  <li><a href="#_Toc335749381">Disable ActiveX Controls</a></li>
+  <li><a href="#_Toc335749382">Layout</a></li>
+  <li><a href="#_Toc335749383">User-agent string</a></li>
+  <li><a href="#_Toc335749384"><abbr title="Frequently Asked Questions">faq</abbr></a></li>
+</ul>
             
           </section></article>
         </div>
