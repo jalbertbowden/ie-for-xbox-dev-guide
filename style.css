@@ -1,19 +1,19 @@
 *{margin:0; padding:0; border:none}
-body{font-family:Calibri, sans-serif; font-weight:200; font-size:110%; background-color:#000}
+body{font-family:Calibri, sans-serif; font-weight:200; font-size:110%}
 
-.content{width:90%; margin-left:auto; margin-right:auto; background-color:#fff; position:relative}
-.banner{background-color:#fff; width:100%; height:100px; margin-bottom:5em}
+.content{width:90%; margin-left:auto; margin-right:auto; position:relative}
+.banner{width:100%; height:75px; border-bottom:2px solid #000080}
 
 
-
-.main{margin-top:12em}
+.main{margin-top:2em}
+.main-index.main{margin-top:5em}
 article{width:90%; margin-right:auto; margin-left:auto}
 section{padding-bottom:5em}
 
 
 ul,li{list-style-type:none}
 
-.toc{border:none;border-bottom:solid navy 1.0pt; padding-bottom:1em;}
+.toc{}
 .toc li{}
 .toc a{}
 
@@ -21,19 +21,25 @@ p{text-align:left; padding:.6em .95em; font-family:Georgia, sans-serif; font-siz
 .no-margin-bottom{margin-bottom:0}
 
 h1,h2,h3,h4,h5,h6{font-family:Arial, sans-serif;}
-h1{margin-bottom:1.4em}
+h1{margin-bottom:1.4em; font-size:1.5em}
 h2{margin-bottom:1.15em}
 h3{margin-bottom:1.0em}
 h4{margin-bottom:.9em}
 
-.indexh{outline:3px dotted #999; font-size:2.25em; font-family:Myriad Pro, sans-serif; font-weight:300; text-align:left}
+.headernext{margin-top:2em; border-top:2px solid #000080; }
+.headernext a{padding-top:2em; display:block; text-align:right}
+.header-toc{border-bottom:2px solid #000080; margin-bottom:.25em}
+
+.indexh{font-size:2.25em; font-family:Myriad Pro, sans-serif; font-weight:300; text-align:left}
 
 
-.logo{display:block; width:100%; border-bottom:2px solid #000080}
-.logo img{display:block; margin-right:1em}
+.logo{display:block; width:100%; position:relative}
+.logo img{position:absolute; right:1em; top:1em}
 
-.
-.header-lead{border:none;border-bottom:solid navy 1.0pt;padding:0in 0in 1.0pt 0in}
+.mslogo{display:block; margin-top:1em; margin-bottom:1em; margin-left:80%}
+
+
+.header-lead{border-bottom:2px solid #000080; color:#000080}
 
 
 figure{text-align:center; margin-top:.15em; margin-bottom:.5em}
@@ -43,3 +49,8 @@ figcaption{text-align:center; font-size:1.75em; font-style:italic; letter-spacin
 
 
 .clearright{clear:right; float:none}
+
+.indexh time{display:block; font-size:.5em}
+
+.notebox{margin:.25em auto; border:1px solid #000}
+.notebox p{padding:.2em .5em; font-style:italic; font-size:1.15em; margin:.1em .2em}
