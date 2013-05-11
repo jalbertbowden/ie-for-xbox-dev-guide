@@ -37,152 +37,69 @@
               <li>Avoid using popups elements. They can be distracting and difficult to close.</li>
             </ul>
             <p>For example, in these next images, there are two examples of a vertical navigation bar. The first example is designed for a mouse interaction. The link spacing is too close together for touch and controller users:</p>
-<img width=451 height=336 id="Picture 6" src="internet-explorer-for-xbox-developers-guide_files/image007.png" alt="Title: TOC example 1 - Description: An image of a web layout highligting poor spacing of links for a touch experience"></p>
-
+            <figure>
+              <img src="i/for-xbox-developers-guide_files/image007.png" alt="Title: TOC example 1 - Description: An image of a web layout highligting poor spacing of links for a touch experience" />
+              <figcaption><p></p></figcaption>
+            </figure>
             <p>Navigating to these links requires too much dexterity on the part of touch and controller users. Clicking the wrong link can be frustrating.</p>
             <p>In this second of the two images, the navigation bar has been modified so that the links are spaced further apart, and dividers have been added that help the user see the hit target area more clearly:</p>
-
-<img width=428 height=297 id="Picture 7" src="internet-explorer-for-xbox-developers-guide_files/image008.jpg" alt="An image of a web layout that has better spacing of links that work better for touch interaction">�</p>
-
-
+            <figure>
+              <img src="i/image008.jpg" alt="An image of a web layout that has better spacing of links that work better for touch interaction" />
+              <figcaption><p></p></figcaption>
+            </figure>
             <h2><a name="_Toc335749362">Layout</a></h2>
             <h3><a name="_Toc335749363">Size</a></h3>
-            <p>Internet Explorer for Xbox uses a combination of zoom and optical zoom to provide a TV-optimized presentation of sites. Websites are automatically zoomed to �fit to width� so that text is larger and legible from a distance. There are several factors that determine this automatic zoom level, including the TV aspect ratio (16:9 or 4:3), the resolution (480p, 720, 1080), and the size of the Safe Area, which is a buffer area around the edge of the TV screen.</p>
+            <p>Internet Explorer for Xbox uses a combination of zoom and optical zoom to provide a TV-optimized presentation of sites. Websites are automatically zoomed to fit to width so that text is larger and legible from a distance. There are several factors that determine this automatic zoom level, including the TV aspect ratio (16:9 or 4:3), the resolution (480p, 720, 1080), and the size of the Safe Area, which is a buffer area around the edge of the TV screen.</p>
             <p>Because Internet Explorer for Xbox automatically optimizes the zoom levels for different hardware, there are a few factors that you should take into account:</p>
-
-<p class=MsoListParagraphCxSpFirst style='margin-top:10.0pt;margin-right:0in;
-margin-bottom:10.0pt;margin-left:.5in;line-height:115%'><span style='font-family:
-Symbol'>�<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span>Websites designed for <b>1024px</b> width generally look great.
-Internet Explorer will automatically fit your webpage to width using layout
-zoom.</p>
-
-<p class=MsoListParagraphCxSpMiddle style='margin-top:10.0pt;margin-right:0in;
-margin-bottom:10.0pt;margin-left:.5in;line-height:115%'><span style='font-family:
-Symbol'>�<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span>Many TVs are widescreen (16:9). Consider using a layout that
-takes advantage of the width of the screen, rather than requiring vertical
-scrolling. </p>
-
-<p class=MsoListParagraphCxSpLast style='margin-top:10.0pt;margin-right:0in;
-margin-bottom:10.0pt;margin-left:.5in;line-height:115%'><span style='font-family:
-Symbol'>�<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span>Internet Explorer for Xbox doesn�t support multiple windows, so
-avoid pop-up windows.</p>
-
-<h3><a name="_Toc335749364">Fixed position elements</a></h3>
-
-<p>Fixed position elements (CSS <span style='font-family:
-"Courier New"'>position: fixed</span>) can interfere with smooth panning and
-scrolling. Avoid positioning elements this way.</p>
-
-<h2><a name="_Toc335749365">Text Considerations</a></h2>
-
-<p>You can increase the legibility of your text by ensuring that it's large enough to be read from 10" away, and by using colors that reduce eye strain.</p>
-
-<p class=MsoListParagraph style='margin-top:0in;margin-right:.25in;margin-bottom:
-4.0pt;margin-left:.5in;line-height:15.75pt;background:white;vertical-align:
-baseline'><span style='font-family:Symbol;color:#333333'>�<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span style='color:#333333'>Avoid using text that is smaller than
-12pt.</span></p>
-
-<p class=MsoListParagraph style='margin-top:0in;margin-right:.25in;margin-bottom:
-4.0pt;margin-left:.5in;line-height:15.75pt;background:white;vertical-align:
-baseline'><span style='font-family:Symbol;color:#333333'>�<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span style='color:#333333'>Many televisions have a higher
-brightness level than a computer monitor. Light-colored text on a dark
-background can reduce eye strain.</span></p>
-
-<h3><a name="_Toc335749366">Color Guidelines</a> </h3>
-
-<p class=MsoListParagraph style='margin-top:0in;margin-right:.25in;margin-bottom:
-4.0pt;margin-left:.5in;line-height:15.75pt;background:white;vertical-align:
-baseline'><span style='font-family:Symbol;color:#333333'>�<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span style='color:#333333'>Avoid using pure white (</span><span
-style='font-family:"Courier New";color:#333333'>rgb(255, 255, 255)</span><span
-style='color:#333333'>) as a background color</span><span style='color:#333333'>.
-Instead, use </span><span style='font-family:"Courier New";color:#333333'>rgb(200,
-200, 200)</span></p>
-
-<p class=MsoListParagraph style='margin-top:0in;margin-right:.25in;margin-bottom:
-4.0pt;margin-left:.5in;line-height:15.75pt;background:white;vertical-align:
-baseline'><span style='font-family:Symbol;color:#333333'>�<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span style='color:#333333'>Internet Explorer will color the "safe area" region at the edge of the screen the same color as your &lt;body&gt; element�s background-color. </span></p>
-
-<p class=MsoListParagraph style='margin-top:0in;margin-right:.25in;margin-bottom:
-4.0pt;margin-left:.5in;line-height:15.75pt;background:white;vertical-align:
-baseline'><span style='font-family:Symbol;color:#333333'>�<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span style='color:#333333'>Test your website on low-quality TVs as well as newer HDTVs.</span></p>
-
-
-<h2><a name="_Toc335749367">Approaches for 4 screens: TV, PC, Tablet, Mobile</a></h2>
-
-<p>For maximum customer reach, many websites are designed and tested for several device form factors, including desktop/laptop PC, tablet, and mobile devices.</p>
-
-<h3><a name="_Toc335749368">Multiple, device-specific webpages</a></h3>
-
-<p>Some websites have device-specific experiences (for example, a mobile site). This might be appropriate for some scenarios. For example, if you're designing a special experience for Xbox that's different than your mobile and desktop experiences, it might be appropriate to build a separate, standalone experience. However, it can be costly to maintain multiple independent versions of your site.</p>
-
-<p>A common way of doing this is to detect the user-agent string (either on the client or the server) and redirect the user to a device-specific webpage. To detect the Xbox, search for the Xbox token in the user-agent string.</p>
-
-<h3><a name="_Toc335749369">One webpage</a></h3>
-
-<p>Given the proliferation of web browsing form factors and input methods, for most websites, we recommend using a single webpage that works well across a range of devices. Here are some things to consider when targeting multiple devices with a single page:</p>
-
-<p class=MsoListParagraphCxSpFirst style='margin-top:10.0pt;margin-right:0in;
-margin-bottom:10.0pt;margin-left:.5in;line-height:115%'><span style='font-family:
-Symbol'>�<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span>Design for mouse, keyboard, touch, and controller</p>
-
-<p class=MsoListParagraphCxSpMiddle style='margin-top:10.0pt;margin-right:0in;
-margin-bottom:10.0pt;margin-left:.5in;line-height:115%'><span style='font-family:
-Symbol'>�<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span>Design for 1024px width, or</p>
-
-<p class=MsoListParagraphCxSpMiddle style='margin-top:10.0pt;margin-right:0in;
-margin-bottom:10.0pt;margin-left:.5in;line-height:115%'><span style='font-family:
-Symbol'>�<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span>Use adaptive design</p>
-
-<p class=MsoListParagraphCxSpMiddle style='margin-top:10.0pt;margin-right:0in;
-margin-bottom:10.0pt;margin-left:1.0in;line-height:115%'><span
-style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
-</span></span>CSS Media Queries or JavaScript can be used to change the layout of your page based on properties of the device that is loading the page.</p>
-
-<p class=MsoListParagraphCxSpMiddle style='margin-top:10.0pt;margin-right:0in;
-margin-bottom:10.0pt;margin-left:1.5in;line-height:115%'><span
-style='font-family:Wingdings'>�<span style='font:7.0pt "Times New Roman"'>&nbsp;
-</span></span>On mobile devices, consider reducing image quality to save bandwidth and improve performance</p>
-
-<p class=MsoListParagraphCxSpMiddle style='margin-top:10.0pt;margin-right:0in;
-margin-bottom:10.0pt;margin-left:1.5in;line-height:115%'><span
-style='font-family:Wingdings'>�<span style='font:7.0pt "Times New Roman"'>&nbsp;
-</span></span>Minimize horizontal scrolling on narrow devices to improve readability</p>
-
-<p class=MsoListParagraphCxSpMiddle style='margin-top:10.0pt;margin-right:0in;
-margin-bottom:10.0pt;margin-left:.5in;line-height:115%'><span style='font-family:
-Symbol'>�<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span>Avoid using plug-ins</p>
-
-<p class=MsoListParagraphCxSpMiddle style='margin-top:10.0pt;margin-right:0in;
-margin-bottom:10.0pt;margin-left:1.0in;line-height:115%'><span
-style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
-</span></span>Use HTML5 audio and video (h.264/AAC/MP3)</p>
-
-<p class=MsoListParagraphCxSpLast style='margin-top:10.0pt;margin-right:0in;
-margin-bottom:10.0pt;margin-left:.5in;line-height:115%'><span style='font-family:
-Symbol'>�<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span>Avoid using pop-up windows</p>
-
-
-
- 
-          </section></article>
+            <ul class="">
+              <li>Websites designed for <b>1024px</b> width generally look great. Internet Explorer will automatically fit your webpage to width using layout zoom.</li>
+              <li>Many TVs are widescreen (16:9). Consider using a layout that takes advantage of the width of the screen, rather than requiring vertical scrolling.</li>
+              <li>Internet Explorer for Xbox doesn't support multiple windows, so avoid pop-up windows.</li>
+            </ul>
+            <h3><a name="_Toc335749364">Fixed position elements</a></h3>
+            <p>Fixed position elements (CSS <span style='font-family: "Courier New"'>position: fixed</span>) can interfere with smooth panning and scrolling. Avoid positioning elements this way.</p>
+            <h2><a name="_Toc335749365">Text Considerations</a></h2>
+            <p>You can increase the legibility of your text by ensuring that it's large enough to be read from 10" away, and by using colors that reduce eye strain.</p>
+            <ul class="">
+              <li>Avoid using text that is smaller than 12pt.</li>
+              <li>Many televisions have a higher brightness level than a computer monitor. Light-colored text on a dark background can reduce eye strain.</li>
+            </ul>
+            <h3><a name="_Toc335749366">Color Guidelines</a> </h3>
+            <ul class="">
+              <li>Avoid using pure white (<span style='font-family:"Courier New";color:#333333'>rgb(255, 255, 255)</span><span style='color:#333333'>) as a background color</span><span style='color:#333333'>. Instead, use </span><span style='font-family:"Courier New";color:#333333'>rgb(200, 200, 200)</span></li>
+              <li>Internet Explorer will color the "safe area" region at the edge of the screen the same color as your &lt;body&gt; element's background-color.</li>
+              <li>Test your website on low-quality TVs as well as newer HDTVs.</li>
+            </ul>
+            <h2><a name="_Toc335749367">Approaches for 4 screens: TV, PC, Tablet, Mobile</a></h2>
+            <p>For maximum customer reach, many websites are designed and tested for several device form factors, including desktop/laptop PC, tablet, and mobile devices.</p>
+            <h3><a name="_Toc335749368">Multiple, device-specific webpages</a></h3>
+            <p>Some websites have device-specific experiences (for example, a mobile site). This might be appropriate for some scenarios. For example, if you're designing a special experience for Xbox that's different than your mobile and desktop experiences, it might be appropriate to build a separate, standalone experience. However, it can be costly to maintain multiple independent versions of your site.</p>
+            <p>A common way of doing this is to detect the user-agent string (either on the client or the server) and redirect the user to a device-specific webpage. To detect the Xbox, search for the Xbox token in the user-agent string.</p>
+            <h3><a name="_Toc335749369">One webpage</a></h3>
+            <p>Given the proliferation of web browsing form factors and input methods, for most websites, we recommend using a single webpage that works well across a range of devices. Here are some things to consider when targeting multiple devices with a single page:</p>
+            <ul class="">
+              <li>Design for mouse, keyboard, touch, and controller</li>
+              <li>Design for 1024px width, or</li>
+              <li>Use adaptive design
+                <ul class="sub-">
+                  <li>CSS Media Queries or JavaScript can be used to change the layout of your page based on properties of the device that is loading the page.
+                    <ul class="sub-sub-">
+                      <li>On mobile devices, consider reducing image quality to save bandwidth and improve performance</li>
+                      <li>Minimize horizontal scrolling on narrow devices to improve readability</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>Avoid using plug-ins
+                <ul class="sub-">
+                  <li>Use HTML5 audio and video (h.264/AAC/MP3)</li>
+                </ul>
+              </li>
+              <li>Avoid using pop-up windows</li>
+            </ul>
+            <h3 class="headernext"><a href="technical-considerations.html">Technical Considerations</a></h3>
+            </section>
+          </article>
         </div>
       <footer></footer>
     </div>
