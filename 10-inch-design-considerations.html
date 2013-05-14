@@ -16,7 +16,7 @@
             <h2><a name="_Toc335749358">Distance from the Screen</a></h2>
             <p>"10" design" applies to experiences that are optimized for the living room. Most Xbox users connect their Xbox to a television and sit about 10 feet away from the screen. <span class="contrast">This distance can make basic tasks on traditional webpages more difficult. For example, small fonts can be hard to read, and hover menus and small links can be difficult to click. </span></p>
             <p class="contrast">When designing a webpage for TV, the viewable area should display less information overall, and what's there should focus on a confined set of tasks (even consider performing their desired task automatically or select the task by default). Try to keep all content &quot;above the fold&quot; and fully viewable on the screen without scrolling down.</p>
-            <ul class="contrast">
+            <ul class="ulist contrast">
               <li>Fonts and graphics on the site need to be larger to account for viewing distance. People sit proportionally farther from a TV than from a computer monitor of the same size.</li>
               <li>To avoid a cluttered appearance on the TV, blank space between elements on the page should be greater. This is typically called white space (or padding) and it's a fundamental aspect of making web content easy to discern and navigate.</li>
               <li>Wide screen displays have more usable horizontal real estate than a desktop monitor, so navigation is better handled from the side (conserving valuable vertical space for content) or as an overlay.</li>
@@ -27,9 +27,9 @@
             <h2><a name="_Toc335749360">Interactions &#45; keep them simple</a></h2>
             <p>Users will interact with Internet Explorer with a variety of input devices, including the controller, Xbox SmartGlass, Xbox 360 Chatpad, and voice. Keep in mind that some interactions that work well with a mouse and keyboard are more difficult to perform using touch or a controller. Avoid using drag-and-drop, hover, and timed interactions.</p>
             <h2><a name="_Toc335749361">Navigation and Links</a></h2>
-            <p>Compared with desktop browsing, two key differences in the living room experience are that user is further away and that controller or finger is a less precise input than the mouse. Along with making targets larger, it may also be necessary to remove links that aren�t appropriate for TV or seldom accessed links to keep navigation above the fold.</p>
+            <p>Compared with desktop browsing, two key differences in the living room experience are that user is further away and that controller or finger is a less precise input than the mouse. Along with making targets larger, it may also be necessary to remove links that aren't appropriate for TV or seldom accessed links to keep navigation above the fold.</p>
             <p>When designing navigation interfaces, make it easy for users to select links and other hit targets by emphasizing selections and making them larger and easy to see. </p>
-            <ul class="contrast">
+            <ul class="ulist contrast">
               <li>Add a hover state to links and buttons to highlight when the pointer has hit its target.</li>
               <li>Make each click target (link, button, and the like) large with ample padding for an expanded target area.</li>
               <li>Elements like close boxes in the corners of pop-ups that are made small to be unobtrusive in a 2-foot UI are either impossible to see or very difficult to click with a mouse from 10 feet.</li>
@@ -37,20 +37,20 @@
             </ul>
             <p>For example, in these next images, there are two examples of a vertical navigation bar. The first example is designed for a mouse interaction. The link spacing is too close together for touch and controller users:</p>
             <figure>
-              <img src="i/for-xbox-developers-guide_files/image007.png" alt="Title: TOC example 1 - Description: An image of a web layout highligting poor spacing of links for a touch experience" />
-              <figcaption><p></p></figcaption>
+              <img src="i/example-of-desktop-features-not-playing-nicely-with-tabular-features-01.png" alt="TOC example 1 - Description: An image of a web layout highligting poor spacing of links for a touch experience" />
+              <figcaption><abbr>toc</abbr> example 1 - Description: An image of a web layout highligting poor spacing of links for a touch experience</figcaption>
             </figure>
             <p>Navigating to these links requires too much dexterity on the part of touch and controller users. Clicking the wrong link can be frustrating.</p>
             <p>In this second of the two images, the navigation bar has been modified so that the links are spaced further apart, and dividers have been added that help the user see the hit target area more clearly:</p>
             <figure>
-              <img src="i/image008.jpg" alt="An image of a web layout that has better spacing of links that work better for touch interaction" />
-              <figcaption><p></p></figcaption>
+              <img src="i/example-of-revisted-desktop-features-for-usability.jpg" alt="An image of a web layout that has better spacing of links that work better for touch interaction" />
+              <figcaption>An image of a web layout that has better spacing of links that work better for touch interaction</figcaption>
             </figure>
             <h2><a name="_Toc335749362">Layout</a></h2>
             <h3><a name="_Toc335749363">Size</a></h3>
             <p>Internet Explorer for Xbox uses a combination of zoom and optical zoom to provide a TV-optimized presentation of sites. Websites are automatically zoomed to fit to width so that text is larger and legible from a distance. There are several factors that determine this automatic zoom level, including the TV aspect ratio (16:9 or 4:3), the resolution (480p, 720, 1080), and the size of the Safe Area, which is a buffer area around the edge of the TV screen.</p>
             <p>Because Internet Explorer for Xbox automatically optimizes the zoom levels for different hardware, there are a few factors that you should take into account:</p>
-            <ul class="">
+            <ul class="ulist">
               <li>Websites designed for <b>1024px</b> width generally look great. Internet Explorer will automatically fit your webpage to width using layout zoom.</li>
               <li>Many TVs are widescreen (16:9). Consider using a layout that takes advantage of the width of the screen, rather than requiring vertical scrolling.</li>
               <li>Internet Explorer for Xbox doesn't support multiple windows, so avoid pop-up windows.</li>
@@ -59,12 +59,12 @@
             <p>Fixed position elements (CSS <span style='font-family: "Courier New"'>position: fixed</span>) can interfere with smooth panning and scrolling. Avoid positioning elements this way.</p>
             <h2><a name="_Toc335749365">Text Considerations</a></h2>
             <p>You can increase the legibility of your text by ensuring that it's large enough to be read from 10" away, and by using colors that reduce eye strain.</p>
-            <ul class="">
+            <ul class="ulist">
               <li>Avoid using text that is smaller than 12pt.</li>
               <li>Many televisions have a higher brightness level than a computer monitor. Light-colored text on a dark background can reduce eye strain.</li>
             </ul>
             <h3><a name="_Toc335749366">Color Guidelines</a> </h3>
-            <ul class="">
+            <ul class="ulist">
               <li>Avoid using pure white (<span style='font-family:"Courier New";color:#333333'>rgb(255, 255, 255)</span><span style='color:#333333'>) as a background color</span><span style='color:#333333'>. Instead, use </span><span style='font-family:"Courier New";color:#333333'>rgb(200, 200, 200)</span></li>
               <li>Internet Explorer will color the "safe area" region at the edge of the screen the same color as your &lt;body&gt; element's background-color.</li>
               <li>Test your website on low-quality TVs as well as newer HDTVs.</li>
@@ -76,13 +76,13 @@
             <p>A common way of doing this is to detect the user-agent string (either on the client or the server) and redirect the user to a device-specific webpage. To detect the Xbox, search for the Xbox token in the user-agent string.</p>
             <h3><a name="_Toc335749369">One webpage</a></h3>
             <p>Given the proliferation of web browsing form factors and input methods, for most websites, we recommend using a single webpage that works well across a range of devices. Here are some things to consider when targeting multiple devices with a single page:</p>
-            <ul class="">
+            <ul class="ulist">
               <li>Design for mouse, keyboard, touch, and controller</li>
               <li>Design for 1024px width, or</li>
               <li>Use adaptive design
-                <ul class="sub-">
+                <ul class="sub-ulist">
                   <li>CSS Media Queries or JavaScript can be used to change the layout of your page based on properties of the device that is loading the page.
-                    <ul class="sub-sub-">
+                    <ul class="sub-sub-ulist">
                       <li>On mobile devices, consider reducing image quality to save bandwidth and improve performance</li>
                       <li>Minimize horizontal scrolling on narrow devices to improve readability</li>
                     </ul>

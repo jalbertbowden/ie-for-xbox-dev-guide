@@ -1,5 +1,10 @@
 *{margin:0; padding:0; border:none}
-body{font-family:Calibri, sans-serif; font-weight:200; font-size:110%}
+
+html{overflow-y:scroll}
+html,body{height:100%}
+body{font-family:Calibri, sans-serif; font-weight:200; font-size:110%; -webkit-font-smoothing:antialiased} 
+body:before{content:""; position:fixed; top:-15px; left:0; width:100%; height:15px; z-index:100; -webkit-box-shadow:0px 0px 10px rgba(0,0,0,.9); -moz-box-shadow:0px 0px 10px rgba(0,0,0,.9); box-shadow:0px 0px 10px rgba(0,0,0,.9)}
+
 
 .content{width:90%; margin-left:auto; margin-right:auto; position:relative}
 .banner{width:100%; height:75px; border-bottom:2px solid #000080}
@@ -17,7 +22,7 @@ ul,li{list-style-type:none}
 .toc li{}
 .toc a{}
 
-p{text-align:left; padding:.6em .95em; font-family:Georgia, sans-serif; font-size:1.45em; margin:.3em .45em}
+p{text-align:left; padding:.6em .95em; font-size:1.45em; margin:.3em .45em}
 .no-margin-bottom{margin-bottom:0}
 
 h1,h2,h3,h4,h5,h6{font-family:Arial, sans-serif;}
@@ -27,7 +32,7 @@ h3{margin-bottom:1.0em}
 h4{margin-bottom:.9em}
 
 .headernext{margin-top:2em; border-top:2px solid #000080; }
-.next{padding-top:2em; display:block; text-align:right; margin-right:1em}
+.next{padding-top:2em; display:block; text-align:right; margin-right:1em; padding-bottom:1em}
 .header-toc{border-bottom:2px solid #000080; margin-bottom:.25em}
 
 .indexh{font-size:2.25em; font-family:Myriad Pro, sans-serif; font-weight:300; text-align:left}
@@ -43,7 +48,8 @@ h4{margin-bottom:.9em}
 
 a{color:#000080}
 figure{text-align:center; margin-top:.15em; margin-bottom:.5em}
-.figimg{display:block; margin-left:auto; margin-right:auto}
+figure img{display:block; margin-left:auto; margin-right:auto}
+.figimgmult{margin-bottom:.25em}
 figcaption{text-align:center; font-size:1.75em; font-style:italic; letter-spacing:-1px; padding-top:.5em; padding-bottom:.2em}
 
 
@@ -59,6 +65,7 @@ figcaption{text-align:center; font-size:1.75em; font-style:italic; letter-spacin
 .contrast{color:#333}
 .times-new-roman{font-family:Times New Roman, sans-serif}
 
+abbr{text-transform:uppercase}
 
 ul{}
 .toc{}
@@ -70,8 +77,22 @@ ul{}
 .toc-sub a{text-indent:2.5em}
 .toc-sub-sub a{text-indent:4em}
 
-
-.sub-{}
-.sub-sub-{}
-.disc li{color:#333333;line-height:18.0pt;background:white}
+.ulist{margin:.2em .45em}
+.ulist li{margin-top:.3em; margin-bottom:.3em; padding-left:1em; font-size:1.3em}
+.sub-ulist{}
+.sub-sub-ulist{}
+.sub-ulist li{padding-left:2em}
+.sub-sub-ulist li{padding-left:2.5em}
+.disc li{color:#333; line-height:18.0pt; background:#fff}
 .circle li{}
+
+
+table{border-collapse:collapse; border-spacing:0; padding-top:0.5em; padding-bottom:0.5em; margin:0.8em auto; -moz-box-shadow:0 0 4px #000; -ms-box-shadow:0 0 4px #000; -o-box-shadow:0 0 4px #000; -webkit-box-shadow:0 0 4px #000; box-shadow:0 0 4px #000; color:#000; width:80%}
+tbody{}
+tfoot{}
+th{font-weight:700; text-align:center; vertical-align:top; font-size:20px; padding-top:0.5em; padding-bottom:0.5em}
+td,caption{font-weight:normal; vertical-align:top}
+caption{text-align:center; font-style:normal; font-weight:normal; font-size:1.25em; padding-bottom:.8em}
+tr{border-bottom:1px solid #ccc}
+td{padding:4px; text-align:left}
+td img{vertical-align:top}
