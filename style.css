@@ -3,7 +3,7 @@ body{font-family:Calibri, sans-serif; font-weight:200; font-size:110%}
 
 .content{width:90%; margin-left:auto; margin-right:auto; position:relative}
 .banner{width:100%; height:75px; border-bottom:2px solid #000080}
-
+.footer{border-top:2px solid #000080}
 
 .main{margin-top:2em}
 .main-index.main{margin-top:5em}
@@ -27,7 +27,7 @@ h3{margin-bottom:1.0em}
 h4{margin-bottom:.9em}
 
 .headernext{margin-top:2em; border-top:2px solid #000080; }
-.headernext a{padding-top:2em; display:block; text-align:right}
+.next{padding-top:2em; display:block; text-align:right; margin-right:1em}
 .header-toc{border-bottom:2px solid #000080; margin-bottom:.25em}
 
 .indexh{font-size:2.25em; font-family:Myriad Pro, sans-serif; font-weight:300; text-align:left}
@@ -61,7 +61,16 @@ figcaption{text-align:center; font-size:1.75em; font-style:italic; letter-spacin
 
 
 ul{}
-.{}
+.toc{}
+.toc,.toc-sub{font-weight:700}
+.toc li{}
+.toc a{display:block; text-indent:1em; color:#000; font-size:1.5em}
+.toc-sub{}
+.toc-sub-sub{font-weight:300}
+.toc-sub a{text-indent:2.5em}
+.toc-sub-sub a{text-indent:4em}
+
+
 .sub-{}
 .sub-sub-{}
 .disc li{color:#333333;line-height:18.0pt;background:white}
