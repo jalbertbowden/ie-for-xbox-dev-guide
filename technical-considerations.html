@@ -77,10 +77,10 @@
               <caption></caption>
               <thead><tr><th colspan="2">Differences between HTML5 features for Internet Explorer for Xbox and Internet Explorer 9</th></tr></thead>
               <tbody>
-                <tr><td>W3C Geolocation</td><td><span style='font-size:10.0pt;font-family:"Courier New"'>navigator.geolocation </span><span style='font-size:10.0pt'>is undefined.</span></td></tr>
-                <tr><td>@font-face</td><td><span style='font-size:10.0pt'>@font-face is supported; however, only .woff and .ttf files are supported.</td></tr>
-                <tr><td>prompt()<b><span style='font-size:10.0pt'> method</span></b></td><td>The JavaScript prompt() method isn't supported.</td></tr>
-                <tr><td>HTTP Authentication</td><td>HTTP Authentication using the </span><span style='font-size:10.0pt;font-family:"Courier New"'>basic</span><span style='font-size:10.0pt'> method is supported. The </span><span style='font-size:10.0pt;font-family:"Courier New"'>digest</span><span style='font-size:10.0pt'> method isn't supported.</span></td></tr>
+                <tr><td>W3C Geolocation</td><td><code>navigator.geolocation</code> is undefined.</td></tr>
+                <tr><td>@font-face</td><td><code>@font-face</code> is supported; however, only .woff and .ttf files are supported.</td></tr>
+                <tr><td><code>prompt()</code> <b>method</b></td><td>The JavaScript <code>prompt()</code> <b>method</b> isn't supported.</td></tr>
+                <tr><td>HTTP Authentication</td><td>HTTP Authentication using the <code>basic</code> <b>method is supported</b>. The <code>digest</code> <b>method</b> isn't supported.</td></tr>
                 <tr><td>VBScript</td><td>VBScript isn't supported and is ignored.</span></p></td></tr>
                 <tr><td>Copy / Paste with JavaScript</td><td>Selection, copy, and paste aren't supported.</span></p></td></tr>
                 <tr><td>XML Data Islands</td><td>XML Data Islands aren't supported.</td></tr>
@@ -101,7 +101,7 @@
               <li><a href="http://go.microsoft.com/fwlink/p/?LinkId=259641">Internet Explorer Standards Support Documents</a></li>
             </ul>
             <h2><a id="ua-header-string">User-agent Header / string</a></h2>
-            <p>Compatibility View is a mode of Internet Explorer that allows webpages that were written for older versions of web standards to work correctly. In Internet Explorer for Xbox, Compatibility View is only enabled if a website is contained in a list of sites that is updated by Microsoft. For more info about the Compatibility View List, refer to <a href="http://go.microsoft.com/fwlink/p/?LinkID=259532"><i>Understanding the Compatibility View List</i></a><span class=MsoHyperlink><i>.</i></span> When Compatibility View is enabled on a website, a different User-Agent string is sent to the website.</p>
+            <p>Compatibility View is a mode of Internet Explorer that allows webpages that were written for older versions of web standards to work correctly. In Internet Explorer for Xbox, Compatibility View is only enabled if a website is contained in a list of sites that is updated by Microsoft. For more info about the Compatibility View List, refer to <a href="http://go.microsoft.com/fwlink/p/?LinkID=259532"><i>Understanding the Compatibility View List</i></a>. When Compatibility View is enabled on a website, a different User-Agent string is sent to the website.</p>
             <p>Users with standard definition (SD) televisions, which are lower-resolution, might use the mobile versions of websites. Users can do this in Internet Explorer for Xbox settings ("Use web pages formatted for mobile devices"). This also changes the Internet Explorer for Xbox User-Agent string.</p>
             <p>Here are the User-Agent strings that are sent by Internet Explorer for Xbox.</p>
             <table>
@@ -127,8 +127,8 @@
               <li><p>Reduce the resolution of your image resources.</p>
                 <p>By reducing image resolution, your images will download faster, and use less memory. If the display size of the reduced resolution image is too small, you can use CSS to stretch an image back to the original display size. Make sure that you rescale your image using an image editing tool simply scaling the image down via CSS, or changing formats from .png to .jpg won't reduce memory usage.</p>
               </li>
-              <li><p>Only use one &lt;video&gt; tag.</p>
-                <p>There is an overhead memory cost for each &lt;video&gt; element on a page. You can use a single &lt;video&gt; element and modify it as necessary (change its position, change the video <code>src=""</code>attribute, and so on).</p>
+              <li><p>Only use one <code>&lt;video&gt;</code> tag.</p>
+                <p>There is an overhead memory cost for each <code>&lt;video&gt;</code> element on a page. You can use a single <code>&lt;video&gt;</code> element and modify it as necessary (change its position, change the video <code>src=""</code>attribute, and so on).</p>
               </li>
             </ul>
             <h2><a id="panscroll" href="#nogo">Panning and Scrolling</a></h2>
@@ -139,7 +139,7 @@
             <p>Internet Explorer for Xbox uses the JavaScript engine for Internet Explorer for fast JavaScript interpretation. However, it doesn't have JIT (Just In Time) compilation, so some JavaScript operations might take longer compared with Internet Explorer for Windows.</p>
             <p>Internet Explorer for Xbox also contains performance enhancements for smooth panning and scrolling. To maintain smooth panning and scrolling on your webpage, limit the use of JavaScript that responds to scroll events.</p>
             <h2><a id="mediaformats" href="#nogo">Media Formats</a></h2>
-            <p>Audio and video support are available via the HTML5 &lt;audio&gt; and &lt;video&gt; tags. For video, the h.264 format is supported. For audio, MP3 and AAC are supported.</p>
+            <p>Audio and video support are available via the HTML5 <code>&lt;audio&gt;</code> and <code>&lt;video&gt;</code> tags. For video, the h.264 format is supported. For audio, MP3 and AAC are supported.</p>
             <p>For optimal video performance, we recommend that you encode your video using the h.264 high profile at 720p resolution.</p>
             <h2><a id="extensions" href="#nogo">Extensions: Plug-ins, ActiveX, and Downloads</a></h2>
             <p>Plug-ins, like ActiveX controls, Browser Helper Objects, Toolbars, and Explorer bars aren't supported in Internet Explorer for Xbox. HTML5 audio and video are available for high quality media experiences.</p>
